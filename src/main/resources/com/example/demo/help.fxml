@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SettingsController">
+    <children>
+        <VBox prefHeight="400.0" prefWidth="600.0">
+            <children>
+                <HBox prefHeight="283.0" prefWidth="600.0">
+                    <children>
+                        <Pane prefHeight="283.0" prefWidth="17.0" />
+                        <GridPane prefHeight="283.0" prefWidth="291.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.2" minWidth="10.0" prefWidth="131.4" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.99998474121094" minWidth="10.0" prefWidth="127.80000000000004" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="%grid.ordinary" GridPane.rowIndex="2" />
+                                <ColorPicker fx:id="ordinary" onAction="#changeColor" prefHeight="26.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <Label text="%grid.first" GridPane.rowIndex="3" />
+                                <ColorPicker fx:id="first" onAction="#changeColor" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <ColorPicker fx:id="second" onAction="#changeColor" prefHeight="26.0" prefWidth="165.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label GridPane.rowIndex="4" />
+                                <Label text="%grid.root" GridPane.rowIndex="1" />
+                                <ColorPicker fx:id="root" onAction="#changeColor" prefHeight="26.0" prefWidth="188.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <Label prefHeight="18.0" prefWidth="122.0" text="%grid.header1">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label text="%grid.lang" GridPane.rowIndex="7" />
+                                <ComboBox fx:id="comboBox" prefHeight="26.0" prefWidth="163.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                <Label text="%grid.header2" GridPane.rowIndex="6">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label text="%grid.second" GridPane.rowIndex="4" />
+                                <Label text="%grid.firstChar" GridPane.rowIndex="8" />
+                                <TextField fx:id="firstClass" prefHeight="26.0" prefWidth="127.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <Label text="%grid.secondChar" GridPane.rowIndex="9" />
+                                <TextField fx:id="secondClass" prefHeight="26.0" prefWidth="166.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets left="10.0" right="10.0" />
+                            </opaqueInsets>
+                        </GridPane>
+                        <Pane prefHeight="283.0" prefWidth="296.0">
+                            <children>
+                                <AnchorPane fx:id="canvas" layoutX="15.0" layoutY="-6.0" prefHeight="251.0" prefWidth="265.0" />
+                                <Label layoutX="14.0" layoutY="6.0" text="%view.header">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                    <opaqueInsets>
+                        <Insets left="10.0" />
+                    </opaqueInsets>
+                </HBox>
+                <HBox prefHeight="79.0" prefWidth="600.0">
+                    <children>
+                        <Pane prefHeight="96.0" prefWidth="13.0" />
+                        <VBox prefHeight="135.0" prefWidth="583.0">
+                            <children>
+                                <Pane prefHeight="15.0" prefWidth="583.0" />
+                        <Label opacity="0.7" text="%grid.about1">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label opacity="0.7" text="%grid.about2">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label opacity="0.7" text="%grid.about3">
+                           <font>
+                              <Font name="System Italic" size="12.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="600.0">
+                    <children>
+                        <Button fx:id="closeButton" mnemonicParsing="false" onAction="#onSettingsClose" text="%button.cancle">
+                            <HBox.margin>
+                                <Insets left="10.0" right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#onSave" text="%button.save">
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

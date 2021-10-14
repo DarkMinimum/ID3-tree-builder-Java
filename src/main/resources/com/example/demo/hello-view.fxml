@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="anchor" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" onDragDropped="#onDragAndDrop" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MainController">
+   <children>
+      <Label layoutX="180.0" layoutY="250.0" text="%label.header" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="280.0" text="%label.description" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font>
+      </Label>
+      <HBox prefHeight="40.0" prefWidth="800.0">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="309.0">
+              <items>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#onOpenCsv" text="%key.open" />
+              </items>
+            </ToolBar>
+            <ToolBar prefHeight="40.0" prefWidth="411.0">
+               <items>
+                  <Button mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onTable" text="%key.dataSet" />
+                <Button alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onHelloButtonClick" text="%key.buildTree" />
+               </items>
+            </ToolBar>
+            <ToolBar prefHeight="40.0" prefWidth="109.0">
+               <items>
+                  <Button fx:id="help" defaultButton="true" mnemonicParsing="false" onAction="#onHelp" text="%key.settings" textAlignment="CENTER" />
+               </items></ToolBar>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
